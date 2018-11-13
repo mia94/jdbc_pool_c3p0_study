@@ -10,7 +10,7 @@ public class LogUtil {
 	static final Logger LOG = LogManager.getLogger();
 
 	public static void prnLog(PreparedStatement pstmt) {
-		LOG.trace(pstmt.toString().substring(pstmt.toString().indexOf(": ") + 2));
+		LOG.trace(pstmt.toString().substring(pstmt.toString().lastIndexOf(": ") + 2));//indexOf를 lastIndexOf로 변환
 	}
 
 	public static void prnLog(String message) {
